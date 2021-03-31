@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(53, 53, 53),rgb(24, 24, 24));
+}
+
+.card{
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgb(162, 23, 255);
+    text-align: center;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 10px 5px rgba(32,32,32,.5);
+}
+
+.card-header{
+    font-size: 1.5rem;
+    color: #a2a2a2;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.card-body{
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.btn{
+    padding: 0.8rem 1.8rem;
+    background-color: rgb(121, 0, 202);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.btn:hover{
+    background-color: rgb(85, 0, 141);
+}
+
+.loadingAnim{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    width: 20px;
+    height: 80px;
+    margin: 0 2rem;
+    background-color: #222222;
+    z-index: 5;
+}
+
+
+/* Animation */
+
+.anim-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.anim-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 200px;
+    background-color: transparent;
+    box-shadow: 0 0 0 10px rgba(32,32,32,.5);
+}
+
+.anim-box{
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    transform-origin: bottom;
+    transform: rotate(180deg);
+    background-color: rgb(162, 23, 255);
+    animation: animCircle 1s infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes animCircle{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
